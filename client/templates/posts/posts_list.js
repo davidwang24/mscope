@@ -1,17 +1,20 @@
 var postsData = [
   {
-    title: 'Introducing Telescope',
+    title: 'v1Introducing Telescope',
     url: 'http://sachagreif.com/introducing-telescope/'
   }, 
   {
-    title: 'Meteor',
+    title: 'v1Meteor',
     url: 'http://meteor.com'
   }, 
   {
-    title: 'The Meteor Book',
+    title: 'v1The Meteor Book',
     url: 'http://themeteorbook.com'
   }
 ];
 Template.postsList.helpers({
-  posts: postsData
+  posts: function() {
+  return Posts.find();
+
+}
 });
